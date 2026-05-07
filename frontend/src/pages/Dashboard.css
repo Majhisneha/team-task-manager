@@ -1,0 +1,220 @@
+.dashboard-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dashboard-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+
+.stat-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--mono);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-blue .stat-value { color: var(--accent); }
+.stat-green .stat-value { color: var(--success); }
+.stat-red .stat-value { color: var(--danger); }
+.stat-purple .stat-value { color: #a78bfa; }
+.stat-gray .stat-value { color: var(--text-muted); }
+
+/* Progress */
+.progress-card {
+  margin-bottom: 24px;
+}
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.progress-pct { color: var(--accent); font-family: var(--mono); }
+
+.progress-bar-track {
+  height: 10px;
+  background: var(--surface2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--success));
+  border-radius: 5px;
+  transition: width 0.6s ease;
+}
+
+.status-breakdown {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.breakdown-count {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--text);
+}
+
+/* Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } }
+
+.card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* User tasks */
+.user-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user-task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.user-task-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.user-task-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar-sm {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-glow);
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-task-name { font-size: 14px; font-weight: 600; }
+.user-task-email { font-size: 12px; color: var(--text-muted); }
+
+.user-task-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.user-total {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--text-muted);
+}
+
+/* Recent tasks */
+.recent-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent-task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.recent-task-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.recent-task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.recent-task-title { font-size: 13px; font-weight: 600; }
+.recent-task-meta { font-size: 11px; color: var(--text-muted); }
+
+.recent-task-badges {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
